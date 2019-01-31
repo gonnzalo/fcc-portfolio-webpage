@@ -1,0 +1,14 @@
+{
+  "name": "fcc-portfolio-webpage",
+  "version": "1.0.0",
+  "description": "ffc responsive projects",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass scss/main.scss css/style.css -w"
+  },
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "node-sass": "^4.11.0"
+  }
+}
