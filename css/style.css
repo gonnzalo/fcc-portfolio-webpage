@@ -1,0 +1,37 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth; }
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1.6; }
+
+#header {
+  font-family: "Raleway", sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-decoration: none; }
+  #header .wrapper-header {
+    width: 80%;
+    margin: 0 auto;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    #header .wrapper-header .logo {
+      text-decoration: none; }
+    #header .wrapper-header #nav-drop {
+      display: flex;
+      justify-content: space-around;
+      list-style-type: none; }
+      #header .wrapper-header #nav-drop li > a {
+        text-decoration: none; }
+      #header .wrapper-header #nav-drop li:not(:last-child) {
+        padding-right: 2rem; }

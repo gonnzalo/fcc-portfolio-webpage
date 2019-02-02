@@ -1,0 +1,32 @@
+#header {
+  font-family: $font-heading;
+  font-size: 2rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  & .wrapper-header {
+    width: 80%;
+    margin: 0 auto;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    & .logo {
+      text-decoration: none;
+    }
+
+    & #nav-drop {
+      display: flex;
+      justify-content: space-around;
+      list-style-type: none;
+
+      & li > a {
+        text-decoration: none;
+      }
+
+      & li:not(:last-child) {
+        padding-right: 2rem;
+      }
+    }
+  }
+}
