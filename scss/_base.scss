@@ -3,6 +3,14 @@ $font-heading: "Raleway", sans-serif;
 $font-body: "Roboto", sans-serif;
 
 // COLOR VARIABLES
+$primary-color-dark: #112d4e;
+$primary-color: #3f72af;
+$primary-color-light: #f9f7f7;
+$primary-color-text: #edf5e1;
+$accent-color: #05386b;
+$primary-text-color: #212121;
+$secondary-text-color: #757575;
+$divider-color: #bdbdbd;
 
 html {
   box-sizing: border-box;
@@ -20,4 +28,6 @@ html {
 body {
   font-family: $font-body;
   line-height: 1.6;
+  color: $primary-text-color;
+  font-size: 110%;
 }
