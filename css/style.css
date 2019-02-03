@@ -20,38 +20,39 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #edf5e1;
+  background-color: #fcfcfc;
   font-family: "Raleway", sans-serif;
   font-size: 2rem;
+  font-weight: 600;
   text-transform: uppercase;
   text-decoration: none; }
   #header .wrapper-header {
     width: 80%;
     margin: 0 auto;
-    height: 80px;
+    height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center; }
     #header .wrapper-header .logo {
       text-decoration: none;
-      color: #222; }
+      color: #46237a; }
     #header .wrapper-header #nav-drop {
       display: flex;
       justify-content: space-around;
       list-style-type: none; }
       #header .wrapper-header #nav-drop li > a {
         text-decoration: none;
-        color: #222; }
+        color: #46237a; }
       #header .wrapper-header #nav-drop li:not(:last-child) {
         padding-right: 2rem; }
 
 #welcome-section {
   min-height: 100vh;
-  background-color: #3f72af;
+  background-color: #3ddc97;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #edf5e1; }
+  color: #46237a; }
   #welcome-section .welcome-text {
     width: 50%; }
     #welcome-section .welcome-text h1 {
@@ -72,12 +73,13 @@ body {
     margin: 0 auto; }
   #projects h2 {
     display: inline-block;
-    border-bottom: 1px solid #222;
+    border-bottom: 4px solid #ff1654ef;
     font-family: "Raleway", sans-serif;
     font-size: 4rem;
     text-transform: uppercase;
     margin-top: 2rem;
-    margin-bottom: 1rem; }
+    margin-bottom: 1rem;
+    color: #ff1654ef; }
   #projects .projects-cointainer {
     display: flex;
     flex-direction: row;
@@ -96,21 +98,25 @@ body {
         height: 100%;
         object-fit: cover;
         border-radius: 5px;
-        box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.3); }
+        box-shadow: 0 0.8rem 2rem rgba(0, 0, 0, 0.3); }
 
 #contact {
-  min-height: 100vh;
-  width: 80%;
-  margin: 0 auto;
-  background-color: #fff;
+  background-color: #46237a;
+  min-height: 50vh;
   display: flex;
   justify-content: center;
   align-items: center; }
   #contact h2 {
     font-family: "Raleway", sans-serif;
     font-size: 3rem;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    color: #3ddc97;
+    margin-right: 4rem; }
+  #contact .icons .fab {
+    font-size: 3rem;
+    color: #3ddc97;
+    margin-left: 1.5rem; }
 
 footer {
   height: 200px;
-  background-color: #1b1a3b; }
+  background-color: #fcfcfc; }

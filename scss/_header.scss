@@ -3,23 +3,24 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: $primary-color-text;
+  background-color: $primary-color-light;
   font-family: $font-heading;
   font-size: 2rem;
+  font-weight: 600;
   text-transform: uppercase;
   text-decoration: none;
 
   & .wrapper-header {
     width: 80%;
     margin: 0 auto;
-    height: 80px;
+    height: 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     & .logo {
       text-decoration: none;
-      color: #222;
+      color: $primary-color-text;
     }
 
     & #nav-drop {
@@ -29,7 +30,7 @@
 
       & li > a {
         text-decoration: none;
-        color: #222;
+        color: $primary-color-text;
       }
 
       & li:not(:last-child) {
