@@ -3,14 +3,12 @@
   top: 0;
   left: 0;
   width: 100%;
-  // background-color: $primary-color-light;
+  // overflow: hidden;
   font-family: $font-heading;
   font-size: 2rem;
   font-weight: 600;
   text-transform: uppercase;
   text-decoration: none;
-  // box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.2);
-
   transition: 0.3s;
   z-index: 1000;
   & .wrapper-header {
@@ -28,19 +26,19 @@
 
     @media screen and (max-width: 750px) {
       width: 90%;
-      & #nav-bar .nav-drop {
+      & #navbar .nav-drop {
         display: block;
         position: absolute;
         background-color: rgb(255, 255, 255);
         border: 2px solid $primary-color-text;
-        padding: 1rem;
+        padding: 2rem;
         top: 100px;
         right: -300px;
         box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.2);
         transition: 0.3s ease-out;
       }
 
-      & #nav-bar .nav-drop-active {
+      & #navbar .nav-drop-active {
         right: 0px;
       }
     }
@@ -156,4 +154,12 @@
       left: 50%;
     }
   }
+}
+
+#offset::before {
+  content: "";
+  display: block;
+  height: 100px; /* fixed header height*/
+  margin: -100px 0 0; /* negative fixed header height */
+  background-color: $primary-color;
 }
