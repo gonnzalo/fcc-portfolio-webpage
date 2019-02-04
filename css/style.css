@@ -1,6 +1,12 @@
 html {
   box-sizing: border-box;
   scroll-behavior: smooth; }
+  @media screen and (max-width: 550px) {
+    html {
+      font-size: 60%; } }
+  @media screen and (min-width: 550px) and (max-width: 750px) {
+    html {
+      font-size: 80%; } }
 
 *,
 *:before,
@@ -12,20 +18,20 @@ html {
 body {
   font-family: "Roboto", sans-serif;
   line-height: 1.6;
-  color: #212121;
-  font-size: 110%; }
+  color: #212121; }
 
 #header {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #fcfcfc;
   font-family: "Raleway", sans-serif;
   font-size: 2rem;
   font-weight: 600;
   text-transform: uppercase;
-  text-decoration: none; }
+  text-decoration: none;
+  transition: 0.3s;
+  z-index: 1000; }
   #header .wrapper-header {
     width: 80%;
     margin: 0 auto;
@@ -36,15 +42,98 @@ body {
     #header .wrapper-header .logo {
       text-decoration: none;
       color: #46237a; }
+    @media screen and (max-width: 750px) {
+      #header .wrapper-header {
+        width: 90%; }
+        #header .wrapper-header #nav-bar .nav-drop {
+          display: block;
+          position: absolute;
+          background-color: white;
+          border: 2px solid #46237a;
+          padding: 1rem;
+          top: 100px;
+          right: -300px;
+          box-shadow: 0 0.2rem 1rem rgba(0, 0, 0, 0.2);
+          transition: 0.3s ease-out; }
+        #header .wrapper-header #nav-bar .nav-drop-active {
+          right: 0px; } }
     #header .wrapper-header #nav-drop {
       display: flex;
       justify-content: space-around;
       list-style-type: none; }
+      #header .wrapper-header #nav-drop .active {
+        border-bottom: 2px solid #46237a; }
+      #header .wrapper-header #nav-drop li {
+        transition: 0.3s; }
+        #header .wrapper-header #nav-drop li:hover {
+          transform: translateY(-2px);
+          opacity: 0.9; }
       #header .wrapper-header #nav-drop li > a {
         text-decoration: none;
-        color: #46237a; }
+        color: #46237a;
+        transition: 0.1s; }
       #header .wrapper-header #nav-drop li:not(:last-child) {
         padding-right: 2rem; }
+
+#js-navbar-toggle {
+  display: none;
+  width: 60px;
+  height: 53px;
+  position: relative;
+  -webkit-transform: rotate(0deg);
+  -moz-transform: rotate(0deg);
+  -o-transform: rotate(0deg);
+  transform: rotate(0deg);
+  -webkit-transition: 0.5s ease-in-out;
+  -moz-transition: 0.5s ease-in-out;
+  -o-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
+  cursor: pointer; }
+  @media screen and (max-width: 750px) {
+    #js-navbar-toggle {
+      display: block; } }
+  #js-navbar-toggle span {
+    display: block;
+    position: absolute;
+    height: 2px;
+    width: 30px;
+    background: #46237a;
+    border-radius: 9px;
+    opacity: 1;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -webkit-transition: 0.25s ease-in-out;
+    -moz-transition: 0.25s ease-in-out;
+    -o-transition: 0.25s ease-in-out;
+    transition: 0.25s ease-in-out; }
+  #js-navbar-toggle span:nth-child(1) {
+    top: 15px; }
+  #js-navbar-toggle span:nth-child(2) {
+    top: 26px; }
+  #js-navbar-toggle span:nth-child(3) {
+    top: 26px; }
+  #js-navbar-toggle span:nth-child(4) {
+    top: 37px; }
+  #js-navbar-toggle.open span:nth-child(1) {
+    top: 18px;
+    width: 0%;
+    left: 50%; }
+  #js-navbar-toggle.open span:nth-child(2) {
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg); }
+  #js-navbar-toggle.open span:nth-child(3) {
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+    transform: rotate(-45deg); }
+  #js-navbar-toggle.open span:nth-child(4) {
+    top: 18px;
+    width: 0%;
+    left: 50%; }
 
 #welcome-section {
   min-height: 100vh;
@@ -55,13 +144,16 @@ body {
   color: #46237a; }
   #welcome-section .welcome-text {
     width: 50%; }
+    @media screen and (max-width: 850px) {
+      #welcome-section .welcome-text {
+        width: 80%; } }
     #welcome-section .welcome-text h1 {
       font-size: 4.5rem;
       font-family: "Raleway", sans-serif;
-      text-transform: uppercase;
       text-align: center; }
     #welcome-section .welcome-text p {
-      text-align: center; }
+      text-align: center;
+      font-size: 1.4rem; }
 
 #projects {
   min-height: 100vh;
@@ -72,14 +164,15 @@ body {
     max-width: 1070px;
     margin: 0 auto; }
   #projects h2 {
-    display: inline-block;
-    border-bottom: 4px solid #ff1654ef;
     font-family: "Raleway", sans-serif;
     font-size: 4rem;
     text-transform: uppercase;
     margin-top: 2rem;
-    margin-bottom: 1rem;
+    margin-bottom: 2.2rem;
     color: #ff1654ef; }
+    @media (max-width: 1182px) {
+      #projects h2 {
+        text-align: center; } }
   #projects .projects-cointainer {
     display: flex;
     flex-direction: row;
@@ -106,17 +199,38 @@ body {
   display: flex;
   justify-content: center;
   align-items: center; }
+  @media (max-width: 650px) {
+    #contact {
+      flex-direction: column; } }
   #contact h2 {
     font-family: "Raleway", sans-serif;
     font-size: 3rem;
     text-transform: uppercase;
     color: #3ddc97;
     margin-right: 4rem; }
+    @media (max-width: 650px) {
+      #contact h2 {
+        margin-right: 0rem;
+        margin-bottom: 1rem; } }
   #contact .icons .fab {
     font-size: 3rem;
     color: #3ddc97;
-    margin-left: 1.5rem; }
+    margin-left: 1.5rem;
+    transition: 0.3s; }
+    @media (max-width: 650px) {
+      #contact .icons .fab {
+        margin: 0 1rem; } }
+    #contact .icons .fab:hover {
+      transform: translateY(-2px);
+      opacity: 0.85; }
 
 footer {
   height: 200px;
-  background-color: #fcfcfc; }
+  background-color: #e9e3e3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; }
+  footer p {
+    color: #757575;
+    font-size: 1.2rem; }

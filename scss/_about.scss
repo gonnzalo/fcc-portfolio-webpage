@@ -7,14 +7,18 @@
   color: $primary-color-text;
   .welcome-text {
     width: 50%;
+
+    @media screen and (max-width: 850px) {
+      width: 80%;
+    }
     h1 {
       font-size: 4.5rem;
       font-family: $font-heading;
-      text-transform: uppercase;
       text-align: center;
     }
     p {
       text-align: center;
+      font-size: 1.4rem;
     }
   }
 }

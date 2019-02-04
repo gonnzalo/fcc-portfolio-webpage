@@ -16,6 +16,14 @@ $btn-color: #256eff;
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
+
+  @media screen and (max-width: 550px) {
+    font-size: 60%;
+  }
+
+  @media screen and (min-width: 550px) and (max-width: 750px) {
+    font-size: 80%;
+  }
 }
 
 *,
@@ -30,5 +38,4 @@ body {
   font-family: $font-body;
   line-height: 1.6;
   color: $primary-text-color;
-  font-size: 110%;
 }
