@@ -36,3 +36,5 @@ navBarToggle.addEventListener("click", () => {
   navDrop.classList.toggle("nav-drop-active");
   navBarToggle.classList.toggle("open");
 });
+
+window.onload = navColor;
